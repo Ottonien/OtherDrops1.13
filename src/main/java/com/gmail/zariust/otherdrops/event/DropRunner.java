@@ -359,7 +359,7 @@ public class DropRunner implements Runnable {
                 try {
                     Bukkit.getServer().dispatchCommand(from, command);
                 } catch (Exception ex) {
-                    Log.logWarning("For some reason we couldn't dispatch the command!");
+                    Log.logError("For some reason we couldn't dispatch the command '/" + command + "'!", ex);
                 }
             }
         }
